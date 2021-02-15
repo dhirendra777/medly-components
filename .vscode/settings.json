@@ -1,5 +1,6 @@
 {
     "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": true,
         "source.organizeImports": true,
@@ -8,13 +9,13 @@
     "eslint.validate": ["html", "javascript", "javascriptreact", "typescript", "typescriptreact"],
     "cSpell.words": ["Medly"],
     "files.exclude": {
-        ".yarnrc": true,
-        ".jest-test-results.json": true,
-        "commitlint.config.js": true,
-        "coverage": true,
+        ".yarnrc": false,
+        ".jest-test-results.json": false,
+        "commitlint.config.js": false,
+        "coverage": false,
         "node_modules/": false,
-        "packages/**/dist/": true,
-        "packages/**/node_modules/": true,
-        "yarn.lock": true
+        "packages/**/dist/": false,
+        "packages/**/node_modules/": false,
+        "yarn.lock": false
     }
 }

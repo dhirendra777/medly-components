@@ -18,22 +18,22 @@ import { useScrollState } from './useScrollState';
 export const Table: FC<TableProps> & WithStyle & StaticProps = React.memo(
     React.forwardRef((props, ref) => {
         const {
-                data,
-                // eslint-disable-next-line @typescript-eslint/no-unused-vars
-                onSort,
-                onRowClick,
-                rowIdentifier,
-                rowSelectionDisableKey,
-                isRowSelectable,
-                isRowExpandable,
-                onRowSelection,
-                isLoading,
-                selectedRowIds,
-                showRowWithCardStyle,
-                withActionBar,
-                withPagination,
-                ...restProps
-            } = props,
+            data,
+            // eslint-disable-next-line @typescript-eslint/no-unused-vars
+            onSort,
+            onRowClick,
+            rowIdentifier,
+            rowSelectionDisableKey,
+            isRowSelectable,
+            isRowExpandable,
+            onRowSelection,
+            isLoading,
+            selectedRowIds,
+            showRowWithCardStyle,
+            withActionBar,
+            withPagination,
+            ...restProps
+        } = props,
             isGroupedTable = !!restProps.groupBy,
             size = showRowWithCardStyle ? 'L' : restProps.size;
 
@@ -121,7 +121,7 @@ export const Table: FC<TableProps> & WithStyle & StaticProps = React.memo(
                                 selectedRowIds: isGroupedTable ? selectedGroupIds : selectedRowIds,
                                 onRowSelection: toggleId,
                                 onGroupedRowSelection: groupedRowSelector.toggleIds,
-                                showShadowAfterFrozenElement: !scrollState.isScrolledToLeft
+                                showShadowAfterFrozenElement: !scrollState.isScrolledToLeft,
                             }}
                         />
                         {withPagination && <Foot />}
@@ -143,7 +143,8 @@ Table.defaultProps = {
     withActionBar: false,
     withPagination: false,
     totalItems: 0,
-    itemsPerPage: 20
+    itemsPerPage: 20,
+    withMinimap: false
 };
 
 Table.displayName = 'Table';

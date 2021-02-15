@@ -110,6 +110,8 @@ export interface TableProps extends Omit<HTMLProps<HTMLTableElement>, 'data' | '
     defaultExpandedRowIdentifier?: unknown;
     /** Row hover actions component */
     rowHoverActions?: React.FC<{ rowData?: ObjectType; rowId?: any }>;
+    /** Enables a mini map to scroll horizontally across the table*/
+    withMinimap?: boolean;
 }
 
 export interface StaticProps {

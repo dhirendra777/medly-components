@@ -6,7 +6,6 @@ module.exports = {
         '!<rootDir>/packages/**/src/**/*.test.(ts|tsx)',
         '!<rootDir>/packages/theme/**/*',
         '!<rootDir>/packages/utils/**/*',
-        '!<rootDir>/packages/core/**/Table/**/*',
         '!<rootDir>/packages/core/**/docs/**/*',
         '!<rootDir>/packages/core/**/CssBaseline/**/*',
         '!<rootDir>/packages/loaders/**/*',
